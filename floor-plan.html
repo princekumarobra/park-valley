@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floor Plans | Park Land Valley - 2BHK and 3BHK Area Details</title>
+    <meta name="description" content="View the carpet area and super built-up area for all 2BHK and 3BHK flat layouts (Flat A to G) at Park Land Valley by Jai Maa Vindhyvasini Construction.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- LIGHTBOX/MODAL STRUCTURE -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+
+    <!-- FLOATING BUTTONS (Reusable Components) -->
+    <a href="#contact-section" class="enquiry-float">Quick Enquiry</a>
+    <a href="https://wa.me/918210989147" target="_blank" class="whatsapp-float">
+        <img src="logo/whatsapp-icon.png" alt="WhatsApp" width="30" height="30">
+    </a>
+
+    <!-- TOP HEADER (Reusable Component) -->
+    <header class="top-header">
+        <div class="container">
+            <a href="tel:+918210989147" class="call-info blink-button">📞 +91 8210989147</a>
+            <span class="location-info">📍 Near Mission School, Aurangabad, Bihar</span>
+            <span class="builder-info">🏗️ By: Jai Maa Vindhyvasini Construction</span>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR (Reusable Component) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-group">
+                <a href="index.html" class="logo-link">
+                    <img src="logo/logo.jpg" alt="Park Land Valley Logo" class="nav-logo-img">
+                </a>
+                <span class="branding-nav-name">PARK LAND VALLEY</span> 
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="mobileMenuToggle()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="floor-plan.html" class="active">Floor Plan</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mobile-detail-bar">
+        <div class="container">
+            <span class="location-mobile">📍 Aurangabad, Bihar</span>
+            <span class="builder-mobile">🏗️ Jai Maa Vindhyvasini Construction</span>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>2BHK & 3BHK Floor Plans</h1>
+                <p>Choose the perfect layout for your family's needs. Click on any image to view full size.</p>
+            </div>
+        </section>
+
+        <!-- Floor Plan Image Gallery (RECTANGLE FIT FIX + Clickable) -->
+        <section class="content-block floor-plan-gallery">
+            <div class="container">
+                <h2>Layouts Available at Park Land Valley</h2>
+                <p class="section-subtitle">We offer various meticulously designed layouts (Flat A to G) to maximize living space and comfort. Click to view full size.</p>
+                
+                <div class="floor-plan-images-flex">
+                    <!-- Images used from /building/ and /interior/ folders -->
+                    <div class="plan-image-wrapper" onclick="openLightbox('building/hero.jpg', 'Sample 2BHK Plan A Layout')">
+                        <img src="building/hero.jpg" alt="2BHK Flat A Floor Plan" class="plan-image-fit-rect">
+                        <p class="plan-caption">Flat A (2BHK)</p>
+                    </div>
+                    <div class="plan-image-wrapper" onclick="openLightbox('interior/interior1.jpg', 'Sample 2BHK Plan B Interior')">
+                        <img src="interior/interior1.jpg" alt="2BHK Flat B Interior View" class="plan-image-fit-rect">
+                        <p class="plan-caption">Flat B (2BHK)</p>
+                    </div>
+                    <div class="plan-image-wrapper" onclick="openLightbox('interior/interior2.jpg', 'Sample 3BHK Plan E Interior')">
+                        <img src="interior/interior2.jpg" alt="3BHK Flat E Interior View" class="plan-image-fit-rect">
+                        <p class="plan-caption">Flat E (3BHK - Premium)</p>
+                    </div>
+                    <div class="plan-image-wrapper" onclick="openLightbox('building/lift.jpg', 'Building Elevation')">
+                        <img src="building/lift.jpg" alt="Building Elevation" class="plan-image-fit-rect">
+                        <p class="plan-caption">Building Elevation</p>
+                    </div>
+                </div>
+
+                <div class="cta-area">
+                    <a href="contact.html" class="secondary-button">Contact for Detailed Drawings</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Area Details Table -->
+        <section class="content-block area-details-section">
+            <div class="container">
+                <h2>Area Details (Carpet Area & Super Built-up Area)</h2>
+                
+                <div class="table-responsive">
+                    <table class="area-details-table">
+                        <thead>
+                            <tr>
+                                <th>Flat Description</th>
+                                <th>Configuration</th>
+                                <th>Carpet Area (Sq Ft)</th>
+                                <th>Super Builtup Area (Sq Ft)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="flat-2bhk">
+                                <td>Flat A</td>
+                                <td>2 BHK</td>
+                                <td>1024.7</td>
+                                <td>1329.8</td>
+                            </tr>
+                            <tr class="flat-2bhk">
+                                <td>Flat B</td>
+                                <td>2 BHK</td>
+                                <td>958.0</td>
+                                <td>1245.5</td>
+                            </tr>
+                            <tr class="flat-2bhk">
+                                <td>Flat C</td>
+                                <td>2 BHK</td>
+                                <td>939.8</td>
+                                <td>1221.8</td>
+                            </tr>
+                            <tr class="flat-2bhk">
+                                <td>Flat D</td>
+                                <td>2 BHK</td>
+                                <td>977.6</td>
+                                <td>1270.8</td>
+                            </tr>
+                            <tr class="flat-3bhk">
+                                <td>Flat E</td>
+                                <td>3 BHK</td>
+                                <td>1135.2</td>
+                                <td>1475.8</td>
+                            </tr>
+                            <tr class="flat-3bhk">
+                                <td>Flat F</td>
+                                <td>3 BHK</td>
+                                <td>1033.1</td>
+                                <td>1343.3</td>
+                            </tr>
+                            <tr class="flat-2bhk">
+                                <td>Flat G</td>
+                                <td>2 BHK</td>
+                                <td>884.4</td>
+                                <td>1149.7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="table-note">Carpet Area is the net usable floor area, while Super Builtup Area includes common areas and is used for pricing.</p>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="enquiry-section" id="contact-section">
+            <div class="container">
+                <h2>Get Exclusive Pricing & Availability</h2>
+                <form id="enquiryForm" class="inline-form">
+                    <input type="text" id="enquiryName" placeholder="Your Name" required>
+                    <input type="tel" id="enquiryMobile" placeholder="Mobile Number (e.g., 9876543210)" pattern="[0-9]{10}" required>
+                    <select id="enquiryInterest" required>
+                        <option value="">Interested In *</option>
+                        <option value="2BHK">2BHK Flat</option>
+                        <option value="3BHK">3BHK Flat</option>
+                        <option value="Both">Both (2BHK & 3BHK)</option>
+                    </select>
+                    <button type="submit" class="cta-submit">Submit Inquiry</button>
+                    <p id="formMessage" class="form-message"></p>
+                </form>
+            </div>
+        </section>
+
+    <!-- 10) FOOTER (Reusable Component) -->
+    <footer>
+        <div class="footer-details container">
+            <div class="footer-col footer-logo-col">
+                <img src="logo/logo.jpg" alt="Park Land Valley Logo" class="footer-logo">
+                <p>Park Land Valley is a project by Jai Maa Vindhyvasini Construction, committed to quality living spaces in Aurangabad, Bihar.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Specifications</a></li>
+                    <li><a href="floor-plan.html">Floor Plans</a></li>
+                    <li><a href="#contact-section">Quick Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Details</h3>
+                <p>📞 +91 8210989147</p>
+                <p>📞 +91 8271401232</p>
+                <p>📍 Near Mission School, <br>Aurangabad, Bihar - 824101</p>
+                <p>📧 jaimaa.vindhyvasinicons@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© <span id="currentYear"></span> Park Land Valley. All Rights Reserved.</p>
+            <p>Designed & Developed by <a href="https://fastupdate.online" target="_blank" class="developer-link">Prince Tech Solutions</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,655 @@
+/* FINAL STYLING: Clean, Responsive, Aligned */
+
+:root {
+    --primary-color: #0d47a1; /* Dark Blue */
+    --secondary-color: #ff9800; /* Orange */
+    --text-color: #333333;
+    --background-color: #ffffff;
+    --dark-bg: #1f1f1f; /* Dark for footer */
+    --light-bg: #f4f4f9;
+    --green-link: #4CAF50; /* Green for developer link */
+    --dark-green: #298c43; /* Darker green for blink button */
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Typography & Buttons */
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+}
+h2 { font-size: 1.6rem; text-align: center; }
+h3 { font-size: 1.1rem; }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.cta-button, .secondary-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.secondary-button {
+    background-color: var(--primary-color);
+}
+
+/* 1) TOP HEADER (Mobile: Small Green Call Button - COMPACT) */
+@keyframes blink {
+    0% { background-color: var(--dark-green); }
+    50% { background-color: var(--green-link); }
+    100% { background-color: var(--dark-green); }
+}
+.top-header {
+    background-color: var(--primary-color);
+    padding: 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.top-header .container {
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: nowrap; 
+}
+.blink-button { 
+    font-size: 1rem; 
+    color: var(--background-color);
+    font-weight: 700;
+    padding: 10px 0; 
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    animation: blink 1.5s linear infinite; 
+    background-color: var(--green-link);
+    background-image: none; 
+}
+/* FINAL FIX: Add just the icon in ::before */
+.blink-button::before {
+    content: "📞 "; 
+    margin-right: 5px;
+}
+.location-info, .builder-info {
+    display: none; 
+}
+
+/* MOBILE FIX: Call Button Display */
+@media (max-width: 767px) {
+    .blink-button {
+        font-size: 1.1rem; 
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+
+/* 2) NAVIGATION BAR (Sticky, White Background - Center Aligned) */
+.navbar {
+    background-color: var(--background-color);
+    padding: 10px 0; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo-img {
+    height: 35px; 
+    width: auto; 
+    margin-right: 8px;
+    object-fit: contain; 
+}
+.branding-nav-name {
+    font-size: 1.1rem; 
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    display: block; 
+}
+.nav-links {
+    list-style: none;
+    display: none; 
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    display: block; 
+}
+
+/* Mobile Detail Bar (Shows Location/Builder - visible on mobile) */
+.mobile-detail-bar {
+    background-color: var(--light-bg);
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #555;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+}
+.mobile-detail-bar span {
+    margin: 2px 8px;
+}
+
+
+/* 3) HERO SECTION */
+.hero-section {
+    height: 60vh; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--background-color);
+    text-align: center;
+    position: relative;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+}
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--background-color);
+}
+section {
+    padding: 40px 0; 
+    overflow: hidden;
+}
+
+
+/* 4) STATS SECTION (Big Numbers - ALIGNED) */
+.stats-section {
+    background-color: var(--secondary-color);
+    padding: 40px 0;
+    color: var(--background-color);
+}
+.stats-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+    text-align: center;
+}
+.stat-box {
+    width: 45%; 
+    padding: 10px 0;
+    position: relative;
+}
+.stat-box h3 {
+    font-size: 3rem; 
+    color: var(--background-color);
+    margin-bottom: 0.1em;
+}
+.stat-box p {
+    font-size: 0.75rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.stats-icon { 
+    font-size: 24px;
+    color: var(--background-color); 
+    margin: 0 auto 5px;
+    display: block;
+}
+
+
+/* ABOUT PAGE IMAGE FIX */
+.content-two-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.col-text {
+    flex: 1 1 100%;
+}
+.col-image-wrapper {
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: center;
+}
+.small-image-fit { 
+    width: 200px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+
+/* 6) FEATURES SECTION (Clean Card Style - FINAL MOBILE SWIPE FIX) */
+.features-grid {
+    gap: 20px;
+    /* Mobile Fix: Horizontal Scroll/Swipe */
+    display: flex; 
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px; /* Space for scrollbar */
+    justify-content: flex-start;
+}
+.feature-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 0 0 80%; /* Takes 80% of container width for swipe effect */
+    min-width: 300px; /* Ensures minimum size */
+    padding: 20px 20px 10px; 
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+.feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.feature-img { /* IMAGE ICONS - FINAL SQUARE FIT */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    margin: 0 auto 10px; 
+    border-radius: 4px;
+    display: block;
+}
+
+
+/* LIGHTBOX/MODAL STYLES (Reusable) */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    object-fit: contain;
+}
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+/* SPECIFICATION & FLOORPLAN PAGE STYLES */
+.specs-grid {
+    display: grid;
+    gap: 30px;
+    padding-top: 30px;
+}
+.spec-card {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.spec-icon {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+.floor-plan-images-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 30px;
+}
+.plan-image-wrapper {
+    flex: 0 0 90%;
+    max-width: 400px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.plan-image-fit-rect { 
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+.plan-caption {
+    padding: 10px;
+    background-color: var(--light-bg);
+    margin: 0;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.table-responsive {
+    overflow-x: auto;
+}
+.area-details-table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+}
+.area-details-table th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+.area-details-table th, .area-details-table td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Contact Page Styles */
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+    justify-content: center;
+}
+.contact-info-box {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 0 0 90%;
+    max-width: 350px;
+}
+.contact-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    display: block;
+    margin-bottom: 10px;
+}
+.map-placeholder {
+    height: 400px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #555;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+.content-image-fit-rect-full { /* For the map placeholder image */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 7) QUICK ENQUIRY FORM (ALIGNED) */
+.enquiry-section {
+    background-color: var(--primary-color);
+    padding: 40px 0;
+}
+.inline-form {
+    /* Final Fix: Vertical Lock on all sizes */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 450px; /* Constrained width for clean look */
+    margin: 0 auto;
+}
+.inline-form input, .inline-form select {
+    padding: 15px 12px; 
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+.cta-submit {
+    padding: 15px 30px; 
+    background: var(--secondary-color);
+    border: none;
+    color: var(--background-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-message {
+    color: var(--background-color);
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* 10) FOOTER (Dark Background, ALIGNED) */
+footer {
+    background-color: var(--dark-bg);
+    color: #ccc;
+    font-size: 0.85rem;
+    padding: 30px 0;
+    text-align: center; 
+}
+.footer-details {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+.footer-col {
+    width: 100%; 
+    margin-bottom: 20px;
+}
+.footer-col ul {
+    list-style: none;
+    padding-left: 0;
+}
+.footer-logo {
+    width: 100px;
+    height: auto; 
+    object-fit: contain; 
+    filter: invert(1);
+}
+.developer-link {
+    color: var(--green-link); 
+    font-weight: bold;
+}
+
+
+/* 8) FLOATING BUTTONS */
+.whatsapp-float {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--green-link);
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.enquiry-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--secondary-color);
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* DESKTOP/TABLET RESPONSIVE FIXES (ALIGNED) */
+@media (min-width: 768px) {
+    /* Top Header (Full Details on Desktop) */
+    .top-header {
+        padding: 8px 0;
+    }
+    .top-header .container {
+        justify-content: space-between;
+    }
+    .blink-button {
+        animation: none; 
+        font-weight: 400;
+        background-color: transparent; 
+        color: var(--background-color);
+        padding: 0;
+        width: auto;
+        font-size: 0.8rem;
+    }
+    .location-info, .builder-info {
+        display: inline-block;
+        margin: 0 5px;
+        font-weight: bold; 
+        color: var(--background-color); 
+    }
+    .mobile-detail-bar {
+        display: none;
+    }
+
+
+    /* Navigation (CENTER ALIGNED) */
+    .navbar .container {
+        justify-content: center;
+    }
+    .nav-links {
+        display: flex;
+        margin-left: 40px;
+    }
+    .logo-group {
+        margin-right: 40px;
+    }
+
+    /* Stats */
+    .stats-section .container {
+        justify-content: space-between;
+    }
+    .stat-box {
+        width: 23%; 
+    }
+
+    /* Features */
+    .features-grid {
+        /* Mobile swipe disabled on desktop */
+        overflow-x: hidden;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+    }
+    .feature-item {
+        flex: 0 0 48%; 
+        max-width: none;
+    }
+
+    /* Floor Plan Gallery */
+    .floor-plan-images-flex {
+        justify-content: space-between;
+    }
+    .plan-image-wrapper {
+        flex: 0 0 23%;
+        max-width: none;
+    }
+
+    /* Specs & Contact Grids */
+    .specs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .contact-grid {
+        justify-content: space-between;
+    }
+    .contact-info-box {
+        flex: 0 0 30%;
+        max-width: none;
+    }
+    
+    /* Enquiry Form: Vertical Lock on all sizes */
+    .inline-form {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 450px; 
+        margin: 0 auto;
+    }
+    .inline-form input, .inline-form select, .cta-submit {
+        width: 100%;
+        padding: 12px;
+        flex-grow: 0;
+    }
+
+    /* Footer (ALIGNED) */
+    footer {
+        text-align: left;
+    }
+    .footer-details {
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-col {
+        width: 30%; 
+        text-align: left;
+    }
+}
+
+@media (min-width: 1024px) {
+    .feature-item {
+        flex: 0 0 23%; 
+    }
+    .specs-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

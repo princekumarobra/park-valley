@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Jai Maa Vindhyvasini Construction & Park Land Valley</title>
+    <meta name="description" content="Learn about Jai Maa Vindhyvasini Construction, the builder of Park Land Valley, our mission, vision, and commitment to quality real estate in Aurangabad, Bihar.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- LIGHTBOX/MODAL STRUCTURE -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+    
+    <!-- FLOATING BUTTONS (Reusable Components) -->
+    <a href="#contact-section" class="enquiry-float">Quick Enquiry</a>
+    <a href="https://wa.me/918210989147" target="_blank" class="whatsapp-float">
+        <img src="logo/whatsapp-icon.png" alt="WhatsApp" width="30" height="30">
+    </a>
+
+    <!-- TOP HEADER (Reusable Component) -->
+    <header class="top-header">
+        <div class="container">
+            <a href="tel:+918210989147" class="call-info blink-button">📞 +91 8210989147</a>
+            <span class="location-info">📍 Near Mission School, Aurangabad, Bihar</span>
+            <span class="builder-info">🏗️ By: Jai Maa Vindhyvasini Construction</span>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR (Reusable Component) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-group">
+                <a href="index.html" class="logo-link">
+                    <img src="logo/logo.jpg" alt="Park Land Valley Logo" class="nav-logo-img">
+                </a>
+                <span class="branding-nav-name">PARK LAND VALLEY</span> 
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="mobileMenuToggle()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="floor-plan.html">Floor Plan</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mobile-detail-bar">
+        <div class="container">
+            <span class="location-mobile">📍 Aurangabad, Bihar</span>
+            <span class="builder-mobile">🏗️ Jai Maa Vindhyvasini Construction</span>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>About Park Land Valley & Our Builder</h1>
+                <p>Committed to Quality, Delivered with Trust.</p>
+            </div>
+        </section>
+
+        <!-- Builder & Project Overview (Image Fix Applied) -->
+        <section class="content-block builder-history">
+            <div class="container">
+                <h2>Jai Maa Vindhyvasini Construction: A Legacy of Trust</h2>
+                <div class="content-two-col">
+                    <div class="col-text">
+                        <p>Established over a decade ago, **Jai Maa Vindhyvasini Construction** has been a pillar of quality and reliability in the Aurangabad real estate market. Our foundation is built on the core values of transparency, engineering excellence, and timely delivery. We don't just build structures; we craft homes and long-lasting relationships with every family we serve.</p>
+                        
+                        <h3>Our Mission & Vision 🎯</h3>
+                        <p>Our mission is to continually raise the standard of living by developing premium, eco-friendly, and earthquake-resistant residential projects. We envision a future where every family in Bihar has access to a modern, safe, and affordable home without compromising on luxury or quality.</p>
+                        
+                        <p>The **Park Land Valley** project is a testament to this commitment. It integrates modern architectural design with high-grade construction material (🧱 RCC Structure) to ensure maximum safety and comfort. Our experience of **10+ Years** in the industry guarantees a seamless home-buying experience.</p>
+                    </div>
+                    <div class="col-image-wrapper">
+                        <!-- Image now uses the small-image-fit class -->
+                        <img src="logo/logo.jpg" alt="Builder Logo" class="small-image-fit">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="content-block core-values-section">
+            <div class="container">
+                <h2>Our Core Philosophy</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="icon-feature">🏆</i> 
+                        <h3>Uncompromising Quality</h3>
+                        <p>We use only certified, high-grade materials, from the foundation to the final finishes, ensuring a durable and long-lasting home.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon-feature">🤝</i>
+                        <h3>Customer Trust</h3>
+                        <p>Transparency in all transactions, clear documentation, and ethical practices define our relationship with our clients.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="icon-feature">⏰</i>
+                        <h3>Timely Delivery</h3>
+                        <p>Our systematic approach and experienced team ensure that we hand over your dream home on the promised date.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Focus -->
+        <section class="content-block project-focus">
+            <div class="container">
+                <h2>Park Land Valley: Your Future Home</h2>
+                <p>Located at a highly accessible point **Near Mission School, Aurangabad** (📍), Park Land Valley offers a perfect blend of peaceful residential life and urban convenience. The project features spacious **2BHK and 3BHK flats** designed for optimal natural light and ventilation. Amenities include high-speed **Lift & dedicated Parking** (⬆️) and round-the-clock security, making it the safest choice for your family.</p>
+                <div class="cta-area">
+                    <a href="project.html" class="secondary-button">View Full Specifications</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section class="enquiry-section" id="contact-section">
+            <div class="container">
+                <h2>Ready to Start Your New Life?</h2>
+                <form id="enquiryForm" class="inline-form">
+                    <input type="text" id="enquiryName" placeholder="Your Name" required>
+                    <input type="tel" id="enquiryMobile" placeholder="Mobile Number (e.g., 9876543210)" pattern="[0-9]{10}" required>
+                    <select id="enquiryInterest" required>
+                        <option value="">Interested In *</option>
+                        <option value="2BHK">2BHK Flat</option>
+                        <option value="3BHK">3BHK Flat</option>
+                        <option value="Both">Both (2BHK & 3BHK)</option>
+                    </select>
+                    <button type="submit" class="cta-submit">Get Price & Details</button>
+                    <p id="formMessage" class="form-message"></p>
+                </form>
+            </div>
+        </section>
+
+    <!-- 10) FOOTER (Reusable Component) -->
+    <footer>
+        <div class="footer-details container">
+            <div class="footer-col footer-logo-col">
+                <img src="logo/logo.jpg" alt="Park Land Valley Logo" class="footer-logo">
+                <p>Park Land Valley is a project by Jai Maa Vindhyvasini Construction, committed to quality living spaces in Aurangabad, Bihar.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Specifications</a></li>
+                    <li><a href="floor-plan.html">Floor Plans</a></li>
+                    <li><a href="#contact-section">Quick Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Details</h3>
+                <p>📞 +91 8210989147</p>
+                <p>📞 +91 8271401232</p>
+                <p>📍 Near Mission School, <br>Aurangabad, Bihar - 824101</p>
+                <p>📧 jaimaa.vindhyvasinicons@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© <span id="currentYear"></span> Park Land Valley. All Rights Reserved.</p>
+            <p>Designed & Developed by <a href="https://fastupdate.online" target="_blank" class="developer-link">Prince Tech Solutions</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

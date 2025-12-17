@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Park Land Valley - Get in Touch</title>
+    <meta name="description" content="Contact Jai Maa Vindhyvasini Construction for sales inquiries, site visits, and booking details for Park Land Valley in Aurangabad, Bihar.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Contact page specific style to make the map placeholder look clean */
+        .map-placeholder {
+            height: 400px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: #555;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LIGHTBOX/MODAL STRUCTURE -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightboxImage">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+    
+    <!-- FLOATING BUTTONS (Reusable Components) -->
+    <a href="#contact-form-section" class="enquiry-float">Quick Enquiry</a>
+    <a href="https://wa.me/918210989147" target="_blank" class="whatsapp-float">
+        <img src="logo/whatsapp-icon.png" alt="WhatsApp" width="30" height="30">
+    </a>
+
+    <!-- TOP HEADER (Reusable Component) -->
+    <header class="top-header">
+        <div class="container">
+            <a href="tel:+918210989147" class="call-info blink-button">📞 +91 8210989147</a>
+            <span class="location-info">📍 Near Mission School, Aurangabad, Bihar</span>
+            <span class="builder-info">🏗️ By: Jai Maa Vindhyvasini Construction</span>
+        </div>
+    </header>
+
+    <!-- NAVIGATION BAR (Reusable Component) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo-group">
+                <a href="index.html" class="logo-link">
+                    <img src="logo/logo.jpg" alt="Park Land Valley Logo" class="nav-logo-img">
+                </a>
+                <span class="branding-nav-name">PARK LAND VALLEY</span> 
+            </div>
+            <button class="menu-toggle" aria-label="Toggle navigation" onclick="mobileMenuToggle()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="floor-plan.html">Floor Plan</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="mobile-detail-bar">
+        <div class="container">
+            <span class="location-mobile">📍 Aurangabad, Bihar</span>
+            <span class="builder-mobile">🏗️ Jai Maa Vindhyvasini Construction</span>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="page-hero-section">
+            <div class="container">
+                <h1>Contact Park Land Valley Sales Team</h1>
+                <p>We are here to answer your questions and schedule your site visit.</p>
+            </div>
+        </section>
+
+        <!-- Contact Details and Map -->
+        <section class="content-block contact-details-section">
+            <div class="container">
+                <h2>Our Location & Contact Info</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-info-box">
+                        <i class="contact-icon">📞</i>
+                        <h3>Call Us</h3>
+                        <p>Sales Team: <a href="tel:+918210989147">+91 8210989147</a></p>
+                        <p>Support: <a href="tel:+918271401232">+91 8271401232</a></p>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <i class="contact-icon">📧</i>
+                        <h3>Email Us</h3>
+                        <p>General Inquiries:</p>
+                        <p><a href="mailto:jaimaa.vindhyvasinicons@gmail.com">jaimaa.vindhyvasinicons@gmail.com</a></p>
+                    </div>
+                    
+                    <div class="contact-info-box">
+                        <i class="contact-icon">📍</i>
+                        <h3>Project Address</h3>
+                        <p>Park Land Valley, Near Mission School,</p>
+                        <p>Aurangabad, Bihar - 824101</p>
+                    </div>
+                </div>
+
+                <div class="map-placeholder">
+                    [Google Map Placeholder for Project Location - Image Placeholder]
+                    <!-- Placeholder Image for Map (FIT FIX) -->
+                    <img src="building/building1.jpg" alt="Project Location Map" class="content-image-fit-rect-full">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Enquiry Form -->
+        <section class="enquiry-section" id="contact-form-section">
+            <div class="container">
+                <h2>Send Us Your Query</h2>
+                <form id="enquiryForm" class="inline-form">
+                    <input type="text" id="enquiryName" placeholder="Your Name" required>
+                    <input type="tel" id="enquiryMobile" placeholder="Mobile Number (e.g., 9876543210)" pattern="[0-9]{10}" required>
+                    <select id="enquiryInterest" required>
+                        <option value="">Interested In *</option>
+                        <option value="2BHK">2BHK Flat</option>
+                        <option value="3BHK">3BHK Flat</option>
+                        <option value="Both">Both (2BHK & 3BHK)</option>
+                    </select>
+                    <button type="submit" class="cta-submit">Submit & Get Call Back</button>
+                    <p id="formMessage" class="form-message"></p>
+                </form>
+            </div>
+        </section>
+
+    <!-- 10) FOOTER (Reusable Component) -->
+    <footer>
+        <div class="footer-details container">
+            <div class="footer-col footer-logo-col">
+                <img src="logo/logo.jpg" alt="Park Land Valley Logo" class="footer-logo">
+                <p>Park Land Valley is a project by Jai Maa Vindhyvasini Construction, committed to quality living spaces in Aurangabad, Bihar.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="project.html">Specifications</a></li>
+                    <li><a href="floor-plan.html">Floor Plans</a></li>
+                    <li><a href="#contact-form-section">Quick Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Details</h3>
+                <p>📞 +91 8210989147</p>
+                <p>📞 +91 8271401232</p>
+                <p>📍 Near Mission School, <br>Aurangabad, Bihar - 824101</p>
+                <p>📧 jaimaa.vindhyvasinicons@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© <span id="currentYear"></span> Park Land Valley. All Rights Reserved.</p>
+            <p>Designed & Developed by <a href="https://fastupdate.online" target="_blank" class="developer-link">Prince Tech Solutions</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
